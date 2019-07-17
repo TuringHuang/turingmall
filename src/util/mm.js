@@ -28,7 +28,7 @@ const mm = {
         }
       },
       error: function(err) {
-        typeof params.error === 'function' && params.error(res.statusText)
+        typeof params.error === 'function' && params.error(err.statusText)
       },
     })
   },
@@ -40,6 +40,8 @@ const mm = {
 
   //获取url里面参数名为name的值
   getUrlParam(name) {
+    //例如：keyword=xxx&page=xxx
+    //以name开头或者&name开头,=后面是非&符号N个(*表示多个)，然后以&或者字符串末尾结束
     let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
     //url里面？里面的参数,匹配成功会返回数组，否则W为null
     let result = window.location.search.substring(1).match(reg)

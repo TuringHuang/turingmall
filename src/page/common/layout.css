@@ -7,3 +7,82 @@ body {
   background: #f6f6f6;
   font: 12px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
 }
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  border: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
+  cursor: pointer;
+}
+
+/* 定宽布局 */
+.w {
+  width: 1080px;
+  margin: 0 auto;
+  /* 让内部使用绝对定位基于此相对定位 */
+  position: relative;
+  /* 清除浮动，让父容器的高度被子元素撑起来，如果不使用，内部全都是有浮动的子元素，那么父容器会没有高度 */
+  overflow: hidden;
+}
+
+/* 全局通用样式 */
+.hide {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  color: #999;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #e80012;
+}
+.link-text {
+  color: #999;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  background: #c60023;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-mini {
+  height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.loading {
+  /* 为了设置其宽高 */
+  display: block;
+  width: 65px;
+  height: 65px;
+  background: url('../../image/loading.gif') no-repeat;
+}
