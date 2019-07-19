@@ -24,7 +24,7 @@ module.exports = {
   entry: {
     common: './src/page/common/index.js',
     index: './src/page/index/index.js',
-    login: './src/page/login/index.js',
+    'user-login': './src/page/user-login/index.js',
     result: './src/page/result/index.js',
   },
 
@@ -106,9 +106,9 @@ module.exports = {
 
   plugins: [
     //打包html配置
-    new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
-    new HtmlWebpackPlugin(getHtmlConfig('login','用户登录')),
-    new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
+    new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
+    new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
     //把css单独打包成文件，否则css样式会在js文件里以字符串的形式存在
     new ExtractTextPlugin('css/[name].css'),
     new webpack.HotModuleReplacementPlugin(),
